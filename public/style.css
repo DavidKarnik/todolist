@@ -1,0 +1,94 @@
+.navbar {
+    background-color: rgba(255,255,255,0.13);
+}
+
+.navbar-title {
+    color: #cccccc;
+    font-weight: bold;
+    text-decoration: none !important;
+    display: inline-block;
+    transition: letter-spacing 0.3s ease-in-out;
+
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    margin-right: 1rem;
+    font-size: 1.5rem;
+    line-height: inherit;
+    white-space: nowrap;
+}
+
+.navbar-title:hover {
+    letter-spacing: 3px; /* Vzdálenost písmen při přejetí myší */
+    color: #cccccc;
+}
+
+body {
+    background-color: #080710;
+}
+
+.form-control {
+    background-color: rgba(255,255,255,0.13);
+}
+
+.list-group-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(255,255,255,0.13);
+    color: #cccccc;
+}
+
+.modal {
+    overflow: hidden !important;
+    height: 20rem;
+    width: 30rem;
+    background-color: rgba(255,255,255,0.13);
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255,255,255,0.1);
+    box-shadow: 0 0 40px rgba(8,7,16,0.6);
+    padding: 50px 50px;
+}
+
+.modal-content {
+    background-color: #c4c4c4;
+}
+
+.modal-dialog {
+    margin: 0;
+}
+
+.top-context {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.welcome-message {
+    color: #cccccc;
+    font-weight: bold;
+    font-size: 1.5rem;
+    /*margin: 5px 0 0 10px;*/
+}
+
+/* Styl pro dokončené todo */
+.done {
+    text-decoration: line-through; /* Přeškrtnutý text pro dokončené todo */
+    opacity: 0.6; /* Snížení průhlednosti pro naznačení dokončení */
+}
+
+/* Styl pro dokončený řádek todo */
+.done-item {
+    background-color: #4CAF50; /* Zelené pozadí pro dokončené todo */
+    color: white; /* Bílý text na zeleném pozadí */
+}
+
+.dropdown {
+    float: right;
+    margin: 0 20px 0 0;
+}

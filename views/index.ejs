@@ -1,0 +1,81 @@
+<%- include("./partials/header") %>
+
+<nav class="navbar navbar-light">
+    <a class="navbar-title" href="/profile">Todo App</a>
+    <button id="logout-btn" class="btn btn-danger btn-sm">Log out</button>
+</nav>
+
+<div class="top-context">
+    <span class="welcome-message">Welcome <%= user.username %></span>
+    <button id="viewJsonBtn" class="btn btn-primary btn-sm">View JSON</button>
+</div>
+
+<!-- Dropdown pro výběr filtru -->
+<div class="dropdown">
+    <button class="btn btn-secondary dropdown-toggle" type="button" id="filterDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Filter
+    </button>
+    <div class="dropdown-menu" aria-labelledby="filterDropdown">
+        <a class="dropdown-item" href="#" onclick="filterTodos('all')">All</a>
+        <a class="dropdown-item" href="#" onclick="filterTodos('done')">Done</a>
+        <a class="dropdown-item" href="#" onclick="filterTodos('undone')">Undone</a>
+    </div>
+</div>
+
+<div class="container mt-5">
+    <form action="/add/todo" method="POST" class="d-flex">
+        <input type="text" name="todo" class="form-control" placeholder="Enter Todo">
+        <input type="submit" value="Add Todo" class="btn btn-md btn-primary mx-2">
+    </form>
+
+
+    <ul class="list-group my-5">
+        <% todo.forEach(todos => { %>
+            <li class="list-group-item<%= todos.done ? ' done-item' : '' %>">
+                <%= todos.todo %>
+                <div>
+                    <a href="/toggle/todo/<%= todos._id %>"
+                       class="btn btn-success btn-sm<%= todos.done ? ' done' : '' %>">
+                        <%= todos.done ? 'Undone' : 'Done' %>
+                    </a>
+                    <button onclick="openEditModal('<%= todos._id %>', '<%= todos.todo %>')"
+                            class="btn btn-info btn-sm">Edit
+                    </button>
+                    <a href="/delete/todo/<%= todos._id %>"
+                       class="btn btn-danger btn-sm">Delete</a>
+                </div>
+            </li>
+        <% }) %>
+    </ul>
+
+
+</div>
+
+<!-- Modální okno pro editaci -->
+<div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Edit Todo</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form id="editForm" action="/edit/todo/<%= todo._id %>" method="POST">
+                    <div class="form-group">
+                        <input type="text" name="todo" id="editTodoText" class="form-control" placeholder="Edit Todo">
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-success btn-sm">Save</button>
+                        <button type="button" class="btn btn-danger btn-sm" data-dismiss="modal">Cancel</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<%- include("./partials/footer") %>
