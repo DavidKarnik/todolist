@@ -4,6 +4,7 @@
   "description": "TODO List Web App",
   "main": "app.js",
   "scripts": {
+    "build": "npm install",
     "start": "node app.js"
   },
   "keywords": [],
