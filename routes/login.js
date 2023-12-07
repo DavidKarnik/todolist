@@ -4,7 +4,7 @@ const User = require("../models/User");
 const jwt = require('jsonwebtoken');
 
 // Přihlašovací stránka
-router.get("/", async(req, res) => {
+router.get("/", async (req, res) => {
     res.render('login');
 })
 
@@ -20,13 +20,14 @@ router.post('/login', async (req, res) => {
 
         // console.log("user.id: " + user.id)
         console.log("User Logged in: " + user.username)
+        // process.env.KEY ... Environment Variables
 
         const token = jwt.sign(
             {
                 id: user.id,
                 username: user.username
             },
-            "hello",
+            process.env.KEY,
             {expiresIn: '1h'}
         );
         res.cookie('token', token, {httpOnly: true});  // Uložení JWT do cookies (možno i localStorage)
