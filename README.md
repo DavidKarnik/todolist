@@ -17,7 +17,7 @@ Project of webpage ToDo list with monolite architecture and database.
 - HTML, CSS, EJS, JS
 - Node JS, Express
 - JWT, Bcrypt, Mongoose
-- MongoDB
+- MongoDB, Docker
 
 ## MongoDB Database
 
@@ -47,10 +47,12 @@ Project of webpage ToDo list with monolite architecture and database.
 ## Deployment
 
 #### Frontend + Backend
-Aplication is hosted on [Render](https://render.com/)
+Application is hosted on [Render](https://render.com/). </br>
+Run `npm run build` in root directory of project for build the application. <br>
+Run `node app.js` for start application server. Navigate to `http://localhost:3000/`.
 
 #### MongoDB Database
-Database is saved in secured hidden repository and is hosted on [MongoDB Atlas](https://www.mongodb.com/atlas/database) - Multi-Cloud Database Service.
+Database is saved in secured hidden repository and is hosted on [MongoDB Atlas](https://www.mongodb.com/atlas/database) - Multi-Cloud Database Service. </br>
 
 ## Screenshots
 
