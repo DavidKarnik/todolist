@@ -22,6 +22,7 @@ Project of webpage ToDo list with monolite architecture and database.
 ## Screenshots
 
 ![App Screenshot](https://via.placeholder.com/700x100?text=Not+Added+Yet)
+![Snímek obrazovky 2023-12-23 204737](https://github.com/DavidKarnik/todolist/assets/91788719/189d7474-db7b-4daa-957a-4e98b86521d5)
 
 ## MongoDB Database
 
