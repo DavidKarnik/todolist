@@ -24,7 +24,7 @@ Project of webpage ToDo list with monolite architecture.
 | :-------- | :------- | :------------------------- |
 | `id` | `ObjectId` | **Required** Todo key |
 | `todo` | `STRING` | Todo text |
-| `done` | `BOOLEAN` | Todo text |
+| `done` | `BOOLEAN` | State of Todo |
 | `user` | `ObjectId` | **FK** User key |
 
 #### Users Collection
