@@ -2,9 +2,22 @@
 
 Project of webpage ToDo list with monolite architecture and database.
 
-#### Logic
+## Actions
+
+url/ -> Login form, Username and Password
+-> Authentication of User -> JWT Token
+url/profile -> Main page
+-> Todos (Add, Delete, Edit, Done/Undone)
+-> Filter of Todos (All, Done, Undone)
+url/json -> Page with todos in JSON for machine learning
+-> Logout button
 
 ## Used Tools and Languages
+
+- HTML, CSS, EJS, JS
+- Node JS, Express
+- JWT, Bcrypt, Mongoose
+- MongoDB
 
 ## Screenshots
 
