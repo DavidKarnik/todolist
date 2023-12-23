@@ -1,6 +1,6 @@
 # ToDo List
 
-Project of webpage ToDo list with monolite architecture.
+Project of webpage ToDo list with monolite architecture and MongoDB.
 
 #### Logic
 
