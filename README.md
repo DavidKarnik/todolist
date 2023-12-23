@@ -54,7 +54,8 @@ Database is saved in secured hidden repository and is hosted on [MongoDB Atlas](
 
 ## Screenshots
 
-![Snímek obrazovky 2023-12-23 204737](https://github.com/DavidKarnik/todolist/assets/91788719/189d7474-db7b-4daa-957a-4e98b86521d5)
+![LogIn](https://github.com/DavidKarnik/todolist/assets/91788719/189d7474-db7b-4daa-957a-4e98b86521d5)
+![MainPage](https://github.com/DavidKarnik/todolist/assets/91788719/dcda55e1-6e1f-4261-b0ba-d1ac5b38c358)
 
 ## Author
 
